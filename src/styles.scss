@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import '~ngx-toastr/toastr.css';
+@import 'theme.scss';
+
+body {
+  font-family: 'Cabin', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  outline: none !important;
+}
+
+i {
+  margin-right: 10px;
+}
+
+@mixin button ($background-color) {
+  user-select: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: $background-color;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn-add-to-cart {
+  @include button($color-secondary);
+}
+
+.btn-check-out {
+  @include button($color-sucess);
+}
+
+.btn-danger {
+  @include button($color-danger);
+  width: 100px !important;
+}
+
+.btn-primary {
+  @include button($color-primary);
+  width: 240px !important;
+}
+
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#main {
+  width: 100%;
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+}
+
+#main div {
+  -webkit-flex: 1;
+  /* Safari 6.1+ */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+}

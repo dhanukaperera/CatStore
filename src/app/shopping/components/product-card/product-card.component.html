@@ -1,0 +1,16 @@
+<div class="card">
+  <a [routerLink]="['/product/',product.name]" routerLinkActive="router-link-active">
+    <img class="product-card-image" [src]="product.imageUrl" [alt]="product.name">
+  </a>
+  <div class="container">
+    <div class="container-body">
+      <h4>{{product.name}}</h4>
+      <p> {{product.price | currency:'USD'}}</p>
+    </div>
+    <div class="container-footer">
+      <button (click)="addToCart(product)" class="button btn-add-to-cart" style="vertical-align:middle;">
+        <span>Add to Cart</span>
+      </button>
+    </div>
+  </div>
+</div>

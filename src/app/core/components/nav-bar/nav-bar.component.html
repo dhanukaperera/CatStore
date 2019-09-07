@@ -1,0 +1,7 @@
+<div class="header">
+  <a [routerLink]="['/']" class="logo"> <i class="fas fa-cat"></i> Cat Store</a>
+  <div class="header-right">
+    <a [routerLink]="['/shopping-cart']"> <i class="fas fa-shopping-cart"></i> Shopping Cart</a>
+    <a class="active">{{cartService.getItemCount()}}</a>
+  </div>
+</div>

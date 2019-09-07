@@ -1,0 +1,50 @@
+@import '../../../../theme.scss';
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 4px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: $color-light;
+}
+
+th {
+  background-color: $color-warning;
+  color: $color-dark;
+  font-size: 1.2rem;
+}
+
+.shopping-cart-container {
+  margin: 50px 100px 50px 100px;
+}
+
+.btn-edit-item-count {
+  border: none;
+  color: $color-primary;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  margin: 4px 2px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.product-img-small {
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

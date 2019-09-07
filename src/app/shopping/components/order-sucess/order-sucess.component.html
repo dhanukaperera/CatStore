@@ -1,0 +1,9 @@
+<div style="text-align: center">
+  <p class="success-icon"><i [class]="message.icon"></i></p>
+  <h1 class="success-title ">{{message.status}}</h1>
+  <h3>{{message.body}}</h3>
+  <p>{{message.footer}}</p>
+  <button [routerLink]="['/']" routerLinkActive="router-link-active" class="button btn-primary" style="vertical-align:middle;">
+    <span>Go Back to Shopping </span>
+  </button>
+</div>

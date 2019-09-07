@@ -1,0 +1,64 @@
+<div class="shopping-cart-container">
+
+  <div id="main">
+    <div>
+      <h1>Shopping Cart</h1>
+    </div>
+    <div style="margin-top: 20px;">
+      <button class="button btn-danger" style="float: right" (click)="clear()">
+        <i class="fas fa-trash"></i> Clear
+      </button>
+    </div>
+  </div>
+
+  <div style="margin-top: 40px;">
+    <table border="1">
+
+      <thead>
+        <th></th>
+        <th>Product</th>
+        <th style="text-align: center">Quantity</th>
+        <th style="text-align: center">Price</th>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let s of shoppingcart">
+
+          <td *ngIf="s.qty > 0">
+            <img class="product-img-small" [src]=" s.product.imageUrl">
+          </td>
+
+          <td *ngIf="s.qty > 0">
+            {{s.product.name}}
+          </td>
+
+          <td style="text-align: center" *ngIf="s.qty > 0">
+            <button class="btn-edit-item-count" (click)="addItem(s.product)"><i class="fas fa-plus-square"></i></button>
+            {{s.qty}}
+            <button class="btn-edit-item-count" (click)="removeItem(s.product)"><i class="fas fa-minus-square"></i></button>
+          </td>
+
+          <td style="text-align: right" *ngIf="s.qty > 0">
+            {{s.product.price * s.qty | currency:'USD'}}
+          </td>
+
+        </tr>
+
+        <tr>
+          <td colspan="4" style="text-align: right">
+            <h3>{{cartService.getTotalPrice() | currency:'USD'}} </h3>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="4">
+            <button (click)="checkOut()" class="button btn-check-out" style="vertical-align:middle;">
+              <span> <i class="fas fa-shopping-cart"></i>Check Out </span>
+            </button>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>

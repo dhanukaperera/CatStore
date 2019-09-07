@@ -1,0 +1,11 @@
+@import '../../../../theme.scss';
+
+.success-icon {
+  font-size: 8rem;
+  color: $color-sucess
+}
+
+.success-title {
+  text-transform: uppercase;
+  color: $color-sucess-darker;
+}

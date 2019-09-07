@@ -1,0 +1,13 @@
+<div id="main">
+  <div style="text-align: cente;">
+    <img *ngIf="product.imageUrl" class="product-img" [src]="product.imageUrl">
+  </div>
+  <div style="padding: 100px;">
+    <h1>{{product.name}}</h1>
+    <p>{{product.description}}</p>
+    <h3>{{product.price | currency:'USD'}}</h3>
+    <button *ngIf="product.name" (click)="addToCart(product)" class="button btn-add-to-cart" style="vertical-align:middle;">
+      <span>Add to Cart</span>
+    </button>
+  </div>
+</div>
